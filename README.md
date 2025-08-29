@@ -1,20 +1,24 @@
+# Bài tập Python - DTH235628 Huỳnh Nguyễn Phương Đông
 
-## Mô tả
-Đây là repo chứa các bài tập Python của sinh viên Huỳnh Nguyễn Phương Đông, mã số DTH235628.
+## Giới thiệu
+Đây là repo chứa các bài tập Python cơ bản, gồm file script và notebook tổng hợp.
 
 ## Danh sách file
-- `bt7.py`, `bt8.py`, `bt9.py`, `bt10.py`: Các bài tập Python.
-- `math_libs.py`: Thư viện các hàm toán học hỗ trợ cho bài tập.
-- `exPart1.ipynb`: Notebook tổng hợp các phần thực hành.
+- `bt7.py`, `bt8.py`, `bt9.py`, `bt10.py`: Bài tập Python dạng script.
+- `math_libs.py`: Thư viện hàm toán học hỗ trợ.
+- `exPart1.ipynb`, `baitapchuong2.ipynb`: Notebook tổng hợp bài tập và lời giải.
 - `README.md`: File mô tả repo.
 
 ## Hướng dẫn sử dụng
-1. Cài đặt Python (khuyến nghị phiên bản >= 3.10).
-2. Chạy các file bài tập bằng lệnh:
-   ```
-   python bt10.py
-   ```
-   (Thay đổi tên file theo bài muốn chạy)
-3. Để xem notebook, mở file `exPart1.ipynb` bằng Jupyter hoặc VS Code.
+- Để chạy các file script, dùng lệnh:
+  ```
+  python bt10.py
+  ```
+  (Thay tên file theo bài muốn chạy)
+- Để làm bài tập và xem lời giải, mở file notebook bằng Jupyter hoặc VS Code:
+  - `baitapchuong2.ipynb` chứa đầy đủ đề bài và lời giải từng câu.
+  - Có thể nhập dữ liệu trực tiếp bằng widget trong notebook.
 
-#
+## Tác giả
+- Huỳnh Nguyễn Phương Đông
+- MSSV: DTH235628
