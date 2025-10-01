@@ -3,7 +3,7 @@
 Tổng quan
 - Repo chứa bài tập Python theo chương dưới dạng script (.py) và notebook (.ipynb).
 - Thư mục chính:
-  - `Bai Tap Giao Trinh/` — script theo giáo trình (Chuong X).
+  - `Bai Tap Giao Trinh/` — script theo giáo trình 
   - `Bai Tap Moodle/` — notebook tổng hợp theo chương.
   - `.venv/` — môi trường ảo (không nên push).
 
