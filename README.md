@@ -60,5 +60,3 @@ jupyter nbconvert --to notebook --execute "Bai Tap Moodle/Bai Tap Chuong 4/baita
 Khắc phục nhanh
 - Kernel không hiện: kiểm tra `jupyter kernelspec list`, reload VS Code.
 - Thiếu pip trên Python hệ thống: dùng venv hoặc cài pip cho interpreter đó.
-
-Nếu cần hỗ trợ tạo `requirements.txt`, cập nhật `.gitignore` hoặc tạo bản notebook demo không tương tác, cho biết hành động mong muốn.
