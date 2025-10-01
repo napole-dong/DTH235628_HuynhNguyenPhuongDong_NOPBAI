@@ -5,7 +5,6 @@ Tổng quan
 - Thư mục chính:
   - `Bai Tap Giao Trinh/` — script theo giáo trình 
   - `Bai Tap Moodle/` — notebook tổng hợp theo chương.
-  - `.venv/` — môi trường ảo (không nên push).
 
 Yêu cầu
 - Python 3.9+ (khuyến nghị 3.13).
@@ -16,9 +15,6 @@ Thiết lập nhanh (Linux / zsh)
 # tạo và kích hoạt venv
 python3 -m venv .venv
 . ./.venv/bin/activate
-
-# cài phụ thuộc (nếu có)
-pip install -r requirements.txt
 
 # (tuỳ chọn) cài ipykernel để notebook nhận kernel của venv
 pip install ipykernel
@@ -39,16 +35,6 @@ Mở và chạy notebook (.ipynb)
 - Mở bằng VS Code hoặc Jupyter Lab/Notebook.
 - Chọn kernel `DTH235628_py` / "Python (DTH235628)".
 - Chạy từng ô (Shift+Enter). Tránh “Run All” nếu có input().
-
-Tạo `requirements.txt`
-```bash
-. ./.venv/bin/activate
-pip freeze > requirements.txt
-```
-
-Không push môi trường ảo
-- Thêm `.venv/` vào `.gitignore`.
-- Commit `requirements.txt` thay vì push `.venv/`.
 
 Chạy notebook không tương tác
 - Thay input() bằng giá trị mẫu hoặc dùng:
