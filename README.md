@@ -1,57 +1,64 @@
-# Bài tập Python - DTH235628 Huỳnh Nguyễn Phương Đông
+# Bài tập Python — Repo DTH235628
 
-## Giới thiệu
-Đây là repo chứa các bài tập Python cơ bản, gồm file script và notebook tổng hợp.
+Tổng quan
+- Repo chứa bài tập Python theo chương dưới dạng script (.py) và notebook (.ipynb).
+- Thư mục chính:
+  - `Bai Tap Giao Trinh/` — script theo giáo trình (Chuong X).
+  - `Bai Tap Moodle/` — notebook tổng hợp theo chương.
+  - `.venv/` — môi trường ảo (không nên push).
 
-## Danh sách file
+Yêu cầu
+- Python 3.9+ (khuyến nghị 3.13).
+- pip, venv. Dùng ipykernel để chạy notebook trong VS Code / Jupyter.
 
-## Hướng dẫn sử dụng
-  ```
-  python bt10.py
-  ```
-  (Thay tên file theo bài muốn chạy)
-  - `baitapchuong2.ipynb` chứa đầy đủ đề bài và lời giải từng câu.
-  - Có thể nhập dữ liệu trực tiếp bằng widget trong notebook.
+Thiết lập nhanh (Linux / zsh)
+```bash
+# tạo và kích hoạt venv
+python3 -m venv .venv
+. ./.venv/bin/activate
 
-## Tác giả
-# Bài tập Python – DTH235628 Huỳnh Nguyễn Phương Đông
+# cài phụ thuộc (nếu có)
+pip install -r requirements.txt
 
-Repo lưu bài tập Python cơ bản (script và notebook) kèm hướng dẫn chạy trên Windows/VS Code.
-
-## Cấu trúc
-- `bt7.py`, `bt8.py`, `bt9.py`, `bt10.py`: Bài tập dạng script (nhập/xuất từ bàn phím).
-- `math_libs.py`: Một số hàm hỗ trợ tính toán.
-- `exPart1.ipynb`: Notebook tổng hợp phần 1.
-- `Bai Tap Chuong 3/baitapchuong3.ipynb`: Notebook các bài Chương 3 (lặp, điều kiện, vẽ hình bằng dấu `*`).
-- `README.md`: Tài liệu này.
-
-## Yêu cầu môi trường
-- Python 3.9+ (Windows)
-- VS Code + extensions: Python, Jupyter
-
-## Chạy các file .py (PowerShell)
-Một số bài yêu cầu nhập dữ liệu khi chạy.
-
-```powershell
-# chạy một bài bất kỳ
-python .\bt10.py
-# hoặc
-py .\bt10.py
+# (tuỳ chọn) cài ipykernel để notebook nhận kernel của venv
+pip install ipykernel
+python -m ipykernel install --user --name DTH235628_py --display-name "Python (DTH235628)"
 ```
 
-## Mở và chạy Notebook trong VS Code
-1. Mở thư mục repo trong VS Code.
-2. Mở một trong các notebook:
-  - `exPart1.ipynb`
-  - `Bai Tap Chuong 3/baitapchuong3.ipynb`
-3. Chọn kernel Python phù hợp (góc phải trên).
-4. Chạy từng cell từ trên xuống (Shift+Enter).
+Chạy script (.py)
+```bash
+# kích hoạt venv
+. ./.venv/bin/activate
 
-Gợi ý: Trong `baitapchuong3.ipynb`, nhập `n` theo hướng dẫn để vẽ các hình (hình chữ nhật rỗng, tam giác vuông rỗng…).
+# chạy script ví dụ
+./.venv/bin/python "Bai Tap Giao Trinh/Chuong 1/bt10.py"
+```
+Lưu ý: nhiều script dùng input() — chạy trong terminal và nhập khi được yêu cầu.
 
-## Lỗi thường gặp
-- Không nhận lệnh `python`: cài Python và khởi động lại VS Code; hoặc dùng `py` thay `python`.
-- Dấu tiếng Việt lỗi trên Terminal: dùng VS Code Terminal (PowerShell) và đặt UTF-8 nếu cần.
+Mở và chạy notebook (.ipynb)
+- Mở bằng VS Code hoặc Jupyter Lab/Notebook.
+- Chọn kernel `DTH235628_py` / "Python (DTH235628)".
+- Chạy từng ô (Shift+Enter). Tránh “Run All” nếu có input().
 
-## Tác giả
-- Huỳnh Nguyễn Phương Đông (MSSV: DTH235628)
+Tạo `requirements.txt`
+```bash
+. ./.venv/bin/activate
+pip freeze > requirements.txt
+```
+
+Không push môi trường ảo
+- Thêm `.venv/` vào `.gitignore`.
+- Commit `requirements.txt` thay vì push `.venv/`.
+
+Chạy notebook không tương tác
+- Thay input() bằng giá trị mẫu hoặc dùng:
+```bash
+pip install nbconvert
+jupyter nbconvert --to notebook --execute "Bai Tap Moodle/Bai Tap Chuong 4/baitapchuong4.ipynb" --output executed.ipynb
+```
+
+Khắc phục nhanh
+- Kernel không hiện: kiểm tra `jupyter kernelspec list`, reload VS Code.
+- Thiếu pip trên Python hệ thống: dùng venv hoặc cài pip cho interpreter đó.
+
+Nếu cần hỗ trợ tạo `requirements.txt`, cập nhật `.gitignore` hoặc tạo bản notebook demo không tương tác, cho biết hành động mong muốn.
